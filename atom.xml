@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>HAPPY</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-30T01:25:37.290Z</updated>
+  <updated>2021-06-30T07:11:26.893Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>����</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RNAhybrid使用方法</title>
+    <link href="http://example.com/2021/06/30/RNAhybrid%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
+    <id>http://example.com/2021/06/30/RNAhybrid%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
+    <published>2021-06-30T07:07:05.000Z</published>
+    <updated>2021-06-30T07:11:26.893Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>RNAhybrid的安装</p><p>#下载</p><p>wget -c <a href="https://bibiserv.cebitec.uni-bielefeld.de/applications/rnahybrid/resources/downloads/RNAhybrid-2.1.2.tar.gz">https://bibiserv.cebitec.uni-bielefeld.de/applications/rnahybrid/resources/downloads/RNAhybrid-2.1.2.tar.gz</a></p><p><img src="F:\博客图片\image-20210630145200619.png" alt="image-20210630145200619"></p><p>#解压（filename**.tar.gz**的解压:）</p><p>tar -zxvf RNAhybrid-2.1.2.tar.gz</p><p>#进入文件夹</p><p>cd RNAhybrid-2.1.2</p><p>./configure<br>make install</p><p>#配置、制作和安装 RNAhybrid。 要为 RNAhybrid 启用图形输出，您需要 ps 格式的库 g2 和 png 和 jpg 格式的 g2 和 gd。 如果没有这些库，只支持文本输出。</p><hr><p>#RNAhybrid的使用比较简单但是事先需准备好：1.目标物种的3‘UTR的.fa文件及目标物种的所有miRNA的.fa文件</p><p><img src="F:\博客图片\image-20210630145846703.png" alt="image-20210630145846703"></p><p>RNAhybrid的运行参数<br>-b <number of hits per target>  #意思是一个miRNA和一个target sequence的某一段序列匹配情况最多列出几次，比如一个miRNA和一个target sequence的某一段序列匹配存在多种情况，则-b 1就是列出最优的匹配情况，一般选1就比较好。这个最终得到的数目也与<energy cut-off>的设定值有关。<br>-c compact output  #使用这个参数，每一个匹配只会显示一行输出。如果只想知道结果是否与RNAhybrid校准的结果相同，建议使用这个参数。<br>-d <xi>,<theta>  #位置和形状参数<br>-f helix constraint  #<br>-h help<br>-m <max targetlength><br>-n <max query length><br>-u &lt;max internal loop size (per side)&gt;  #内部成环的错配碱基的个数，使用-u 0，将得到完全没有错配碱基内部成环的结构。<br>-v <max bulge loop size>  #internal loop是两条链都没有结合位点的内部环，而bulge loop是某一条上多出的碱基的突出<br>-e <energy cut-off>  #两条序列匹配的最低自由能，先设置 -e -30看看效果。<br>-p <p-value cut-off><br>-s (3utr_fly|3utr_worm|3utr_human)  #用于极值分布参数的快速估计，你可以选择nothing,3utr_fly, 3utr_worm和3utr_human来更好的匹配这些物种。你不能同时使用helix constrain和approximate p-value这两个参数。<br>-g (ps|png|jpg|all)  #图片输出的格式，有ps,png,jpg或者all四个选项<br>-t <target file>  #fasta格式的target gene文件<br>-q <query file>  #fasta格式的miRNA文件</p><hr><p>#RNAhybrid linux端的运行只需一行代码，较为简单基础代码如下，并且可根据自身需要调试</p><p>RNAhybrid -f 2,7 -d 1.9,0.28 -e -25 -v 1 -u 1 -t Bos_tur_All_3’UTR.fa -q Bos_All-miRNA.fa&gt;RNAhybrid_result</p><p>#如果是整个物种的3’UTR和所有miRNA进行匹配，速度较慢请耐心等待</p><p>#但一般情况是某一基因的3’UTR和所有miRNA进行匹配，这种结果一般是几秒钟就出来了（跟服务器的性能有关）</p><p>#最终的结果可以用</p><p>cat RNAhybrid_result</p><p>或是导出查看</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

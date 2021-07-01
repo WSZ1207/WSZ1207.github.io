@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-01T08:31:25.165Z</updated>
+  <updated>2021-07-01T08:48:43.321Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>s</title>
-    <link href="http://example.com/2021/07/01/s/"/>
-    <id>http://example.com/2021/07/01/s/</id>
-    <published>2021-07-01T07:53:57.000Z</published>
-    <updated>2021-07-01T08:31:25.165Z</updated>
+    <title>Hexo图片无法显示问题</title>
+    <link href="http://example.com/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</id>
+    <published>2021-07-01T08:38:21.000Z</published>
+    <updated>2021-07-01T08:48:43.321Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="/2021/07/01/s/image-20210630145200619.png" alt="image-20210630145200619"></p><p>哈哈哈哈</p><hr><p><img src="/2021/07/01/s/image-20210630145200619.png" alt="image-20210630145200619"></p><p>哈哈哈哈</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>hexo版本3.7.8</p><p>用的是Typora编辑博客内容</p><p>也遇到了本地博客无法生成图片的问题</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164108398-1625128870290.png" alt="image-20210701164108398"></p><p>兜兜转转了好几遍，找到了问题</p><p>首先是插件</p><p>默认代码</p><p>npm install hexo-asset-image –save</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164235045-1625128956091.png" alt="image-20210701164235045"></p><p>在node_modules安装了一个挺老的版本但无所谓</p><p>然后就是_config.yml中</p><p>改post_asset_folder:为 true</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164604341.png" alt="image-20210701164604341"></p><hr><p>最后，我们需要调试Typora的偏好设置；设置结果如下！</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164728919.png" alt="image-20210701164728919"></p><p>结合Typora设置+hexo设置即可解决本地图片不显示问题！</p>]]></content>
     
     
       

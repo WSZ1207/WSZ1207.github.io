@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-02T03:30:06.817Z</updated>
+  <updated>2021-07-02T06:43:11.774Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/"/>
     <id>http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/</id>
     <published>2021-07-02T01:40:03.000Z</published>
-    <updated>2021-07-02T03:30:06.817Z</updated>
+    <updated>2021-07-02T06:43:11.774Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>NCBI的blast是直接可以生成引物</p><p><a href="https://www.ncbi.nlm.nih.gov/">https://www.ncbi.nlm.nih.gov/</a></p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094802857.png" alt="image-20210702094802857"></p><p>点击 Primer-blast</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094841238.png" alt="image-20210702094841238"></p><p>界面如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094903583.png" alt="image-20210702094903583"></p><p>需要关注的地方不多，一一讲解</p><hr><p>首先是启动子引物设计：</p><p>找到基因序列</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111018416.png" alt="image-20210702111018416"></p><p>要求不高，物种正确，第一个即可</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111312450.png" alt="image-20210702111312450"></p><p>进入后搜索：gene bank  点击进去后如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111342014.png" alt="image-20210702111342014"></p><p>启动子有个默认的规则是 在基因转录起始位点前方2000bp左右</p><p>因此</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111508117.png" alt="image-20210702111508117"><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111528225.png" alt="image-20210702111528225"></p><p>直接修改region 向前2300bp左右</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112436041.png" alt="image-20210702112436041"></p><p>复制1-2800bp的序列 点击pick primer</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095444200.png" alt="image-20210702095444200"></p><hr><p>如果需要将启动子潜在的位点2000bp全部克隆下来，我们则需要再2300-2000bp左右设计上游引物；下游引物在2000bp后</p><p>因此!删除原有内容，直接复制，然后设置获得引物的区间</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112552250.png" alt="image-20210702112552250"></p><p>其余参数如下：</p><p>PCR product size   Min：2000            Max:2500</p><p>Database: <img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095854327.png" alt="image-20210702095854327"></p><p>需要关注的点在产物长度，和primer比对时的数据库，由于启动子在基因组(提取DNA克隆)上；因此选用全基因组数据库进行引物特异性检测</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702100030893.png" alt="image-20210702100030893"></p><p>生成<img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112913057.png" alt="image-20210702112913057"></p><p>出来的都是在基因组上特异性较好的引物了，自己挑选</p>]]></content>
     
@@ -34,6 +34,8 @@
     
     
     
+    <category term="实验技能" scheme="http://example.com/tags/%E5%AE%9E%E9%AA%8C%E6%8A%80%E8%83%BD/"/>
+    
   </entry>
   
   <entry>
@@ -41,7 +43,7 @@
     <link href="http://example.com/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
     <id>http://example.com/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</id>
     <published>2021-07-01T08:38:21.000Z</published>
-    <updated>2021-07-01T08:48:43.321Z</updated>
+    <updated>2021-07-02T06:43:00.211Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>hexo版本3.7.8</p><p>用的是Typora编辑博客内容</p><p>也遇到了本地博客无法生成图片的问题</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164108398-1625128870290.png" alt="image-20210701164108398"></p><p>兜兜转转了好几遍，找到了问题</p><p>首先是插件</p><p>默认代码</p><p>npm install hexo-asset-image –save</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164235045-1625128956091.png" alt="image-20210701164235045"></p><p>在node_modules安装了一个挺老的版本但无所谓</p><p>然后就是_config.yml中</p><p>改post_asset_folder:为 true</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164604341.png" alt="image-20210701164604341"></p><hr><p>最后，我们需要调试Typora的偏好设置；设置结果如下！</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164728919.png" alt="image-20210701164728919"></p><p>结合Typora设置+hexo设置即可解决本地图片不显示问题！</p>]]></content>
     
@@ -54,6 +56,8 @@
     
     
     
+    <category term="博客美化" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
+    
   </entry>
   
   <entry>
@@ -61,7 +65,7 @@
     <link href="http://example.com/2021/06/30/RNAhybrid%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>http://example.com/2021/06/30/RNAhybrid%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
     <published>2021-06-30T07:07:05.000Z</published>
-    <updated>2021-07-01T08:30:43.400Z</updated>
+    <updated>2021-07-02T06:43:20.671Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>RNAhybrid的安装</p><p>#下载</p><p>wget -c <a href="https://bibiserv.cebitec.uni-bielefeld.de/applications/rnahybrid/resources/downloads/RNAhybrid-2.1.2.tar.gz">https://bibiserv.cebitec.uni-bielefeld.de/applications/rnahybrid/resources/downloads/RNAhybrid-2.1.2.tar.gz</a></p><p><img src="/2021/06/30/RNAhybrid%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/image-20210630145200619-1625128227840.png" alt="image-20210630145200619"></p><p>#解压（filename**.tar.gz**的解压:）</p><p>tar -zxvf RNAhybrid-2.1.2.tar.gz</p><p>#进入文件夹</p><p>cd RNAhybrid-2.1.2</p><p>./configure<br>make install</p><p>#配置、制作和安装 RNAhybrid。 要为 RNAhybrid 启用图形输出，您需要 ps 格式的库 g2 和 png 和 jpg 格式的 g2 和 gd。 如果没有这些库，只支持文本输出。</p><hr><p>#RNAhybrid的使用比较简单但是事先需准备好：1.目标物种的3‘UTR的.fa文件及目标物种的所有miRNA的.fa文件</p><p><img src="/2021/06/30/RNAhybrid%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/image-20210630145846703-1625128238605.png" alt="image-20210630145846703"></p><p>RNAhybrid的运行参数<br>-b <number of hits per target>  #意思是一个miRNA和一个target sequence的某一段序列匹配情况最多列出几次，比如一个miRNA和一个target sequence的某一段序列匹配存在多种情况，则-b 1就是列出最优的匹配情况，一般选1就比较好。这个最终得到的数目也与<energy cut-off>的设定值有关。<br>-c compact output  #使用这个参数，每一个匹配只会显示一行输出。如果只想知道结果是否与RNAhybrid校准的结果相同，建议使用这个参数。<br>-d <xi>,<theta>  #位置和形状参数<br>-f helix constraint  #<br>-h help<br>-m <max targetlength><br>-n <max query length><br>-u &lt;max internal loop size (per side)&gt;  #内部成环的错配碱基的个数，使用-u 0，将得到完全没有错配碱基内部成环的结构。<br>-v <max bulge loop size>  #internal loop是两条链都没有结合位点的内部环，而bulge loop是某一条上多出的碱基的突出<br>-e <energy cut-off>  #两条序列匹配的最低自由能，先设置 -e -30看看效果。<br>-p <p-value cut-off><br>-s (3utr_fly|3utr_worm|3utr_human)  #用于极值分布参数的快速估计，你可以选择nothing,3utr_fly, 3utr_worm和3utr_human来更好的匹配这些物种。你不能同时使用helix constrain和approximate p-value这两个参数。<br>-g (ps|png|jpg|all)  #图片输出的格式，有ps,png,jpg或者all四个选项<br>-t <target file>  #fasta格式的target gene文件<br>-q <query file>  #fasta格式的miRNA文件</query></target></p-value></energy></max></max></max></theta></xi></energy></number></p><hr><p>#RNAhybrid linux端的运行只需一行代码，较为简单基础代码如下，并且可根据自身需要调试</p><p>RNAhybrid -f 2,7 -d 1.9,0.28 -e -25 -v 1 -u 1 -t Bos_tur_All_3’UTR.fa -q Bos_All-miRNA.fa&gt;RNAhybrid_result</p><p>#如果是整个物种的3’UTR和所有miRNA进行匹配，速度较慢请耐心等待</p><p>#但一般情况是某一基因的3’UTR和所有miRNA进行匹配，这种结果一般是几秒钟就出来了（跟服务器的性能有关）</p><p>#最终的结果可以用</p><p>cat RNAhybrid_result</p><p>或是导出查看</p>]]></content>
     
@@ -73,6 +77,8 @@
     
     
     
+    
+    <category term="分析手段" scheme="http://example.com/tags/%E5%88%86%E6%9E%90%E6%89%8B%E6%AE%B5/"/>
     
   </entry>
   

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>HAPPY</title>
+  <title>WSZ@blog</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-01T08:48:43.321Z</updated>
+  <updated>2021-07-02T03:30:06.817Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NCBI生成基因启动子克隆引物</title>
+    <link href="http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/"/>
+    <id>http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/</id>
+    <published>2021-07-02T01:40:03.000Z</published>
+    <updated>2021-07-02T03:30:06.817Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>NCBI的blast是直接可以生成引物</p><p><a href="https://www.ncbi.nlm.nih.gov/">https://www.ncbi.nlm.nih.gov/</a></p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094802857.png" alt="image-20210702094802857"></p><p>点击 Primer-blast</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094841238.png" alt="image-20210702094841238"></p><p>界面如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094903583.png" alt="image-20210702094903583"></p><p>需要关注的地方不多，一一讲解</p><hr><p>首先是启动子引物设计：</p><p>找到基因序列</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111018416.png" alt="image-20210702111018416"></p><p>要求不高，物种正确，第一个即可</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111312450.png" alt="image-20210702111312450"></p><p>进入后搜索：gene bank  点击进去后如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111342014.png" alt="image-20210702111342014"></p><p>启动子有个默认的规则是 在基因转录起始位点前方2000bp左右</p><p>因此</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111508117.png" alt="image-20210702111508117"><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111528225.png" alt="image-20210702111528225"></p><p>直接修改region 向前2300bp左右</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112436041.png" alt="image-20210702112436041"></p><p>复制1-2800bp的序列 点击pick primer</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095444200.png" alt="image-20210702095444200"></p><hr><p>如果需要将启动子潜在的位点2000bp全部克隆下来，我们则需要再2300-2000bp左右设计上游引物；下游引物在2000bp后</p><p>因此!删除原有内容，直接复制，然后设置获得引物的区间</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112552250.png" alt="image-20210702112552250"></p><p>其余参数如下：</p><p>PCR product size   Min：2000            Max:2500</p><p>Database: <img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095854327.png" alt="image-20210702095854327"></p><p>需要关注的点在产物长度，和primer比对时的数据库，由于启动子在基因组(提取DNA克隆)上；因此选用全基因组数据库进行引物特异性检测</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702100030893.png" alt="image-20210702100030893"></p><p>生成<img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112913057.png" alt="image-20210702112913057"></p><p>出来的都是在基因组上特异性较好的引物了，自己挑选</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo图片无法显示问题</title>

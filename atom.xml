@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-03T09:32:00.868Z</updated>
+  <updated>2021-07-04T04:59:29.091Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基因染色体定位</title>
+    <link href="http://example.com/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/"/>
+    <id>http://example.com/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/</id>
+    <published>2021-07-04T04:34:53.000Z</published>
+    <updated>2021-07-04T04:59:29.091Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>想要做基因的染色体定位，陈程杰大神的TBtools直接能够实现</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704123730517.png" alt="image-20210704123730517"></p><p>直接搜索Gene location 选择Gene Location Visualize from GTF/GFF</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704124115864.png" alt="image-20210704124115864"></p><p>进入后界面如下</p><p>一次要录入的是</p><p>基因组注释文件</p><p>基因名称文件</p><p>基因重复对文件（可不录入）</p><p>基因颜色文件（可选）</p><p>更名文件（可选）</p><p>拖放包含染色体热图数据的文件（可不选）</p><hr><p>基因组注释文件获取</p><h3 id="推荐Ensembl-http-asia-ensembl-org-info-data-ftp-index-html"><a href="#推荐Ensembl-http-asia-ensembl-org-info-data-ftp-index-html" class="headerlink" title="推荐Ensembl http://asia.ensembl.org/info/data/ftp/index.html"></a>推荐Ensembl <a href="http://asia.ensembl.org/info/data/ftp/index.html">http://asia.ensembl.org/info/data/ftp/index.html</a></h3><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704124758191.png" alt="image-20210704124758191"></p><p>搜索仔细需要的物种</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704124814159.png" alt="image-20210704124814159"></p><p>点击GTF<img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704124846677.png" alt="image-20210704124846677"></p><p>下载倒数第三个</p><hr><p>基因名称文件制作</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704125005574.png" alt="image-20210704125005574"></p><p>录入格式是Gene_ID,在Ensembl的GTF注释文件中Gene_ID的表现格式是这样的</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704125124993.png" alt="image-20210704125124993"></p><hr><p>如果gene ID有重复</p><p>这进行基因重复对文件构建</p><p>录入格式也为TXT即可</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704125346160.png" alt="image-20210704125346160"></p><p>类似于这样的录入方式即可</p><hr><p>剩余的颜色，ID转换等文件录入方式与上面一致</p><p>都是‘基因ID’+‘TAB’+‘内容’</p><p>例如：我的gene ID的名字需要更换，所以</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704125547217.png" alt="image-20210704125547217"></p><p>将gene_ID更换为数字，其实更换为office gene symbol name也可以</p><p>然后点击star</p><p><img src="/2021/07/04/%E5%9F%BA%E5%9B%A0%E6%9F%93%E8%89%B2%E4%BD%93%E5%AE%9A%E4%BD%8D/image-20210704125827478.png" alt="image-20210704125827478"></p><p>基础的定位图片生成完毕</p><p>其余想要更改出自己中意的图请修改‘基因颜色文件’及图内设置</p><p>方法同理</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>NCBI下载基因组注释文件</title>

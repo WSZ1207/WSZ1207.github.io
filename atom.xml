@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-02T06:43:11.774Z</updated>
+  <updated>2021-07-03T09:57:47.699Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单个基因注释染色体</title>
+    <link href="http://example.com/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/"/>
+    <id>http://example.com/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/</id>
+    <published>2021-07-03T09:32:57.000Z</published>
+    <updated>2021-07-03T09:57:47.699Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>首先打开NCBI：<a href="https://www.ncbi.nlm.nih.gov/">https://www.ncbi.nlm.nih.gov/</a></p><p>搜索框选择基因组并输入目的物种</p><p><img src="/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/image-20210703173418563.png" alt="image-20210703173418563"></p><p>search</p><p><img src="/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/image-20210703173445583.png" alt="image-20210703173445583"></p><p><img src="/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/image-20210703173500977.png" alt="image-20210703173500977"></p><p>选择GFF文件下载</p><hr><p>下载结束后直接打开神器！TBtools</p><p><img src="/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/image-20210703173807629.png" alt="image-20210703173807629"></p><p>找到 genelocation visualize from GTF/GFF</p><p><img src="/2021/07/03/%E5%8D%95%E4%B8%AA%E5%9F%BA%E5%9B%A0%E6%B3%A8%E9%87%8A%E6%9F%93%E8%89%B2%E4%BD%93/image-20210703173901960.png" alt="image-20210703173901960"></p><p>显示结果如下</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>NCBI下载基因组注释文件</title>
+    <link href="http://example.com/2021/07/03/NCBI%E4%B8%8B%E8%BD%BD%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/"/>
+    <id>http://example.com/2021/07/03/NCBI%E4%B8%8B%E8%BD%BD%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/</id>
+    <published>2021-07-03T09:32:00.000Z</published>
+    <updated>2021-07-03T09:32:00.868Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>NCBI生成基因启动子克隆引物</title>

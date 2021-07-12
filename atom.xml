@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-07T09:20:53.012Z</updated>
+  <updated>2021-07-12T01:42:36.514Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>系统进化树构建</title>
+    <link href="http://example.com/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/"/>
+    <id>http://example.com/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/</id>
+    <published>2021-07-12T00:34:20.000Z</published>
+    <updated>2021-07-12T01:42:36.514Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>系统发育树又名分子进化树，是<a href="https://baike.baidu.com/item/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/24603501">生物信息学</a>中描述不同生物之间的相关关系的方法。通过<a href="https://baike.baidu.com/item/%E7%B3%BB%E7%BB%9F%E5%AD%A6/482697">系统学</a>分类分析可以帮助人们了解所有<a href="https://baike.baidu.com/item/%E7%94%9F%E7%89%A9/161443">生物</a>的进化历史过程。（百度到的）</p><p>第一步：</p><p>获取目的基因蛋白</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712083808467.png" alt="image-20210712083808467"></p><p>NCBI搜索，根据自己想要物种选择</p><p>获取蛋白序列</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712090807651.png" alt="image-20210712090807651"></p><hr><p>打开</p><p>MEGA7.0</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712092235047.png" alt="image-20210712092235047"></p><p>build Alignment后</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712092318829.png" alt="image-20210712092318829"></p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712092330548.png" alt="image-20210712092330548"></p><p>选择蛋白序列 新建文件 复制粘贴</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712092434913.png" alt="image-20210712092434913"></p><hr><p>录入完毕后</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712092829121.png" alt="image-20210712092829121"></p><p>点击</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712092953579.png" alt="image-20210712092953579"></p><p>后续默认</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712093043715.png" alt="image-20210712093043715"></p><p>回到开始菜单</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712093151345.png" alt="image-20210712093151345"></p><p>Phylogeny-Neighbor-Joining Tree（采用邻接法）</p><p>参数如下</p><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712094009279.png" alt="image-20210712094009279"></p><hr><p><img src="/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20210712094214342.png" alt="image-20210712094214342"></p><p>结果如图，成图后可在设置进行细节调试</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>R语言导入表格</title>
+    <link href="http://example.com/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/"/>
+    <id>http://example.com/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/</id>
+    <published>2021-07-12T00:17:44.000Z</published>
+    <updated>2021-07-12T00:29:11.832Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>很多时候R语言read table读入txt文件时，如果不进行设置总会出现没有行名或者没有列名的情况</p><p><img src="/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/image-20210712082226021.png" alt="image-20210712082226021"></p><p><img src="/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/image-20210712082250703.png" alt="image-20210712082250703"></p><p>列名是1-12</p><p>行名时V1-V10</p><p>这时可以用一种笨办法，也就是命第一列和第一行名或列名为行/列名</p><p>然后再缩进一行或一列</p><hr><p>我以csv文件为例，因为读取csv是，R语言会默认读取的csv拥有列名</p><p><img src="/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/image-20210712082713381.png" alt="image-20210712082713381"></p><p><img src="/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/image-20210712082729855.png" alt="image-20210712082729855"></p><p>这时运行后续代码</p><p>rownames(data)=data$ID<br>data1=data[,-1]<br>data=data1</p><p><img src="/2021/07/12/R%E8%AF%AD%E8%A8%80%E5%AF%BC%E5%85%A5%E8%A1%A8%E6%A0%BC/image-20210712082825558.png" alt="image-20210712082825558"></p><p>data文件的行列设置完毕</p><hr><p>PS：感谢朝云大佬教学</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>利用NCBI效率的生成基因定量引物</title>

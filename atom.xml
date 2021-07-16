@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-12T01:42:36.514Z</updated>
+  <updated>2021-07-16T02:32:31.417Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>R语言：相关性计算</title>
+    <link href="http://example.com/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/"/>
+    <id>http://example.com/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/</id>
+    <published>2021-07-16T02:17:02.000Z</published>
+    <updated>2021-07-16T02:32:31.417Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果想做成相关性图</p><p>不管是基因表达之间的相关性或者是基因与性状之间的关联，可以用R包‘tidyverse’和‘corrplot’实现</p><p>首先是录入数据的要求</p><p>举个栗子！</p><p><img src="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/image-20210716102432133.png" alt="image-20210716102432133"></p><p>录入数据如上所示</p><p>横坐标代表的是所有相关性的基因或者表型或者你需要的其他数据</p><p>纵坐标代表重复，重复一般越多越好，三个重复也不是不能做，但是不会出什么好结果，至少重复在4以上</p><p>以上数据存储为.csv格式</p><hr><p>打开R</p><p>代码简单：</p><p>不过首先先确定运行文件夹<img src="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/image-20210716102827052.png" alt="image-20210716102827052"></p><p>然后导入数据，编辑数据表格</p><p>rm(list = ls())<br>getwd();<br>workingDir = “.”;<br>setwd(workingDir);<br>library(tidyverse)<br>library(corrplot)<br>data=read.csv(“example.csv”)<br>rownames(data)=data$ID<br>data1=data[,-1]<br>data=data1</p><p><img src="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/image-20210716102932528.png" alt="image-20210716102932528"></p><p><img src="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/image-20210716102940824.png" alt="image-20210716102940824"></p><p>最后data的格式如上！</p><p>运行分析代码：</p><p>cor(data) %&gt;% corrplot(method = “circle”,order = “hclust”,<br>                         type = “lower”,tl.srt = 45,tl.col = “black”)</p><p><img src="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/image-20210716103111129.png" alt="image-20210716103111129"></p><p>#下面是格式代码如有需要可自行运行</p><p>res1 &lt;- cor.mtest(data)<br>cor(data)%&gt;% corrplot(type=”lower”, order=”hclust”,tl.srt = 45,<br>                        tl.col = “black”,<br>                        p.mat = res1$p,insig = “p-value”,sig.level = -1)</p><p>cor(data)%&gt;% corrplot(type=”lower”, order=”hclust”,<br>                        p.mat = res1$p,insig = “p-value”)</p><p>cor(data)%&gt;% corrplot(type=”lower”,order=”hclust”,<br>                        p.mat = res1$p,insig = “blank”)</p><p>cor(data)%&gt;% corrplot(type=”lower”,order=”hclust”,<br>                        p.mat = res1$p, sig.level = .05)</p><p>cor(data)%&gt;% corrplot(type=”lower”,order=”hclust”,<br>                        p.mat = res1$p, sig.level = .01)</p><p>cor(data) %&gt;% corrplot(type=”lower”, order=”hclust”,<br>                         p.mat = res1$p,insig = “label_sig”,<br>                         sig.level = c(.001, .01, .05),<br>                         pch.cex = .9, pch.col = “white”,<br>                         tl.srt = 45,tl.col = “black”)</p><p><img src="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/image-20210716103224559.png" alt="image-20210716103224559"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;如果想做成相关性图&lt;/p&gt;
+&lt;p&gt;不管是基因表达之间的相关性或者是基因与性状之间的关联，可以用R包‘tidyverse’和‘corrplot’实现&lt;/p&gt;
+&lt;p&gt;首先是录入数据的要求&lt;/p&gt;
+&lt;p&gt;举个栗子！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2021/07/16/R%E</summary>
+      
+    
+    
+    
+    
+    <category term="R语言" scheme="http://example.com/tags/R%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>系统进化树构建</title>

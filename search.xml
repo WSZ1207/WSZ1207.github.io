@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>基因ID转换</title>
+      <link href="/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/"/>
+      <url>/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://biit.cs.ut.ee/gprofiler/convert">http://biit.cs.ut.ee/gprofiler/convert</a></p><p>g:Profile 有很多神奇的功能</p><p>包括GO分析及KEGG分析，但是现阶段还是用DAVID进行GO和KEGG更妥当</p><p>因为在牛上，DAVID更新的更快</p><hr><p>利用g:Profile 将已知的gene symbol ID进行更换</p><p><img src="/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/image-20210727084351154.png" alt="image-20210727084351154"></p><p>左菜单栏单贴gene office symbol name</p><p>有菜单栏选择物种及目标基因输出名称</p><p><img src="/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/image-20210727084731876.png" alt="image-20210727084731876"></p><p>结果</p><p><img src="/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/image-20210727084744710.png" alt="image-20210727084744710"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>R语言：相关性计算</title>
       <link href="/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/"/>
       <url>/2021/07/16/R%E8%AF%AD%E8%A8%80%EF%BC%9A%E7%9B%B8%E5%85%B3%E6%80%A7%E8%AE%A1%E7%AE%97/</url>

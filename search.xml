@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>kmeans聚类分析</title>
+      <link href="/2021/09/02/kmeans%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/"/>
+      <url>/2021/09/02/kmeans%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>kmeans的介绍参考知乎：<a href="https://zhuanlan.zhihu.com/p/78798251?utm_source=qq">https://zhuanlan.zhihu.com/p/78798251?utm_source=qq</a></p><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>容易理解，聚类效果不错，虽然是局部最优， 但往往局部最优就够了；</li><li>处理大数据集的时候，该算法可以保证较好的伸缩性；</li><li>当簇近似高斯分布的时候，效果非常不错；</li><li>算法复杂度低。</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>K 值需要人为设定，不同 K 值得到的结果不一样；</li><li>对初始的簇中心敏感，不同选取方式会得到不同结果；</li><li>对异常值敏感；</li><li>样本只能归为一类，不适合多分类任务；</li><li>不适合太离散的分类、样本类别不平衡的分类、非凸形状的分类。</li></ul><hr><p>开始计算</p><p>导入数据</p><p><img src="/2021/09/02/kmeans%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/image-20210902100906667.png" alt="image-20210902100906667"></p><p>数据格式如上所示，虽然低，但是不要所有的值全为NA，运行代码会报错</p><p>NA即为A-G的表达值全部为0</p><p>打开R</p><p>导入数据：</p><p>rm(list = ls())<br>getwd();<br>workingDir = “.”;<br>setwd(workingDir);<br>options(stringsAsFactors = FALSE);</p><p>data=read.csv(“Data_kmeans.csv”)<br>rownames(data)=data$ID<br>mean=data[,-1]<br>data=mean</p><p>data_train_matrix=as.matrix(t(#最后再把将标准化的结果再转置，将行变成列，列变成行<br>                              scale(#每一列取个均值，取个方差，每个点的值取个均值，取个方差，这样得到的就是标准化的值，但是是对每一列进行的标准化，所以先对数据进行转置，才能满足对函数的要求<br>                                t(data)#先进行进行转置，行变成列，列变成行，然后对scale函数对其进行处理<br>                                )<br>                              )<br>                            )</p><p><img src="/2021/09/02/kmeans%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/image-20210902105755231.png" alt="image-20210902105755231"></p><p>继续</p><p>k = 8   #选择分类多少；赋值</p><p>#核心代码#<br>cl=kmeans(data_train_matrix,k,iter.max = 1000)</p><p>#data_train_matrix 标准化的数值；#iter.max 需要进行diedai?的次数，首先是随机选择的点进行的聚类，聚完类进行聚类分析的更新以后，再进行聚类，就是迭代，1000个没啥问题，如果1000次觉得少，可以进行增加，10000，十万都可以，这都是没事问题) #k,表示聚类的个数nstart表示聚类的起始个数，如果数据量不大可以不要，这个值可以设置比k值小，也可以大）</p><p>#结果输出</p><p>write.table(cl$centers,file=”kmeans_center.txt”,<br>            sep = “\t”,quote = F,row.names = T)#quote 是否需要双引号输出，row.name=T 表示输出行的名字</p><p>result = data.frame(id=row.names(data),cluster = cl$cluster,data)</p><p>write.table(result,file=”kmeans_cluster.txt”,<br>            sep = “\t”,quote = F,row.names = F)</p><p>cluster = as.matrix(cl$cluster)</p><p>rownum = 2 #画几行，根据图进行调整<br>colnum = 4 #画几列</p><p>pdf(file = “kmeans.pdf”,<br>    width = colnum<em>2,height =rownum</em>2)</p><p>par(mfrow=c(rownum,colnum),mar=c(1.5,1.3,1.2,0.4)+0.1, #c,3行4列；mar给出图的四条边；<br>    mgp=c(0.5,0.05,0),tck=0.02,cex.axis=0.8,cex.lab=0.8, #mgp给出轴的坐标标签和轴线条线边距值；tck:刻度值；axis:轴的刻度大小<br>    cex.main=1,font.lab=1,font.axis=1,font.main=1,col.axis=”black”) #cex.main：标题；font.lab=1,font.axis=1,font.main=1：字体；颜色灰色</p><p>color=rainbow(k)</p><p>for (i in 1:k) {<br>  x=cluster[,1]==i  #==判断是否相等<br>  part=data_train_matrix[x,]<br>  len=dim(part)[1]</p><p> part=rbind(part,cl$centers[i,])</p><p>  matplot(t(part),type=’l’,lty=1,col=c(rep(color[i],len),rep(“black”,1)),<br>          axes=F,main=paste(“Cluter”,i,seq=””),xlab = “”,ylab = “Standardised BSRP”,<br>           ylim = range(data_train_matrix))</p><p>  box(lwd=0.5,col=”black”)<br>  axis(2,lwd=0.5,col=”black”,las=1)<br>  axis(1,1:dim(data_train_matrix)[2],labels = F,lwd=0.5,mgp=c(0,-0.2,0))<br>  text(1:dim(data_train_matrix)[2],par(“usr”)[3]-0.05,srt=45,col=”black”,adj=1,<br>       xpd=T,labels = colnames(data_train_matrix),cex=0.8) </p><p>  }<br>  dev.off()</p><p>最后<img src="/2021/09/02/kmeans%E8%81%9A%E7%B1%BB%E5%88%86%E6%9E%90/image-20210902110212276.png" alt="image-20210902110212276"></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>miRNA_seq测序分析</title>
+      <link href="/2021/07/31/miRNA-seq%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/"/>
+      <url>/2021/07/31/miRNA-seq%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p>首先，下载需要的miRNAbase数据  发卡，前体，成熟序列</p><p><img src="/2021/07/31/miRNA-seq%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/image-20210731093849983.png" alt="image-20210731093849983"></p><p>前体数据</p><p>wget -c <a href="ftp://mirbase.org/pub/mirbase/CURRENT/miRNA.dat.gz">ftp://mirbase.org/pub/mirbase/CURRENT/miRNA.dat.gz</a></p><p>成熟体序列</p><p>wget -c <a href="ftp://mirbase.org/pub/mirbase/CURRENT/mature.fa.gz">ftp://mirbase.org/pub/mirbase/CURRENT/mature.fa.gz</a></p><p><img src="/2021/07/31/miRNA-seq%E6%B5%8B%E5%BA%8F%E5%88%86%E6%9E%90/image-20210731093934705.png" alt="image-20210731093934705">慢慢下吧</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>基因ID转换</title>
       <link href="/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/"/>
       <url>/2021/07/27/%E5%9F%BA%E5%9B%A0ID%E8%BD%AC%E6%8D%A2/</url>

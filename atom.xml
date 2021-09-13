@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-02T03:02:19.433Z</updated>
+  <updated>2021-09-13T01:09:57.197Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用参考基因组网址</title>
+    <link href="http://example.com/2021/09/13/%E5%B8%B8%E7%94%A8%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%BD%91%E5%9D%80/"/>
+    <id>http://example.com/2021/09/13/%E5%B8%B8%E7%94%A8%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%BD%91%E5%9D%80/</id>
+    <published>2021-09-13T01:07:51.000Z</published>
+    <updated>2021-09-13T01:09:57.197Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://links.jianshu.com/go?to=https://www.ncbi.nlm.nih.gov/genome/">NCBI genome</a></p><p><a href="https://links.jianshu.com/go?to=http://uswest.ensembl.org/info/data/ftp/index.html">Ensembl FTP</a>牛基因组还是首推 Ensembl</p><p><a href="https://links.jianshu.com/go?to=http://hgdownload.cse.ucsc.edu/goldenPath/">UCSC FTP</a>：cytoband文件可能含有gneg等标识，其中acen表示着丝粒区域、stalk表示近端着丝粒区域、gvar表示异染色质，例如臂间或端粒区域。</p><p><a href="https://links.jianshu.com/go?to=http://support.illumina.com/sequencing/sequencing_software/igenome.html">iGenomes</a>：部分模式生物bowtie、bowtie2和BWA索引基因组。</p><p><a href="https://links.jianshu.com/go?to=https://ccb.jhu.edu/software/hisat2/index.shtml">HISAT2</a>：部分模式生物HISAT2索引基因组。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://links.jianshu.com/go?to=https://www.ncbi.nlm.nih.gov/genome/&quot;&gt;NCBI genome&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://links.jianshu.com/</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>kmeans聚类分析</title>

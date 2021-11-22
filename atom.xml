@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-27T08:37:59.858Z</updated>
+  <updated>2021-11-22T03:36:43.397Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>miRanda预测miRNA结合位点</title>
+    <link href="http://example.com/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/"/>
+    <id>http://example.com/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/</id>
+    <published>2021-11-22T01:43:34.000Z</published>
+    <updated>2021-11-22T03:36:43.397Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先下载，官网找</p><p><a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/">https://www.cs.kent.ac.uk/people/staff/dat/miranda/</a></p><p><img src="/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/image-20211122095343256.png" alt="image-20211122095343256"></p><p><img src="/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/image-20211122095359739.png" alt="image-20211122095359739"></p><p>输入文件miRNA.fa  gene.fa</p><p><img src="/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/image-20211122111234814.png" alt="image-20211122111234814"></p><p>linux版本</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget http://cbio.mskcc.org/microrna_data/miRanda-aug2010.tar.gz</span><br><span class="line">tar -xzvf miRanda-aug2010.tar.gz</span><br><span class="line">cd miRanda-3.3a </span><br><span class="line">./configure </span><br><span class="line">--prefix=/home/wangshuzhe/miRanda2010/miRanda-3.3a #--prefix最好设置为当前文件夹的路径</span><br><span class="line">make install </span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">miranda Bos_All-miRNA.fa TCONS_00009489.fa -out All_miRNA.expressed.fa.out.0 -sc 150.0 -en -30 -scale 4.0 -go -2.0 -ge -8.0 -quiet</span><br><span class="line">#从中提取出关键信息</span><br><span class="line">grep &#x27;&gt;&#x27; All_miRNA.expressed.fa.out.0 &gt;All_miRNA.expressed.fa.out.0.miRanda.aln</span><br><span class="line">#最后得到的文件即为miRNA与靶基因，最后将结果输入cytoscape画网络图。</span><br></pre></td></tr></table></figure><p><img src="/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/image-20211122105613488.png" alt="image-20211122105613488"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">miranda Bos_All-miRNA.fa TCONS_00009489.fa -out All_miRNA.expressed.fa.out.0 -sc 150.0 -en -20 -scale 4.0 -go -2.0 -ge -8.0 -quiet</span><br><span class="line">#从中提取出关键信息</span><br><span class="line">grep &#x27;&gt;&#x27; All_miRNA.expressed.fa.out.0 &gt;All_miRNA.expressed.fa.out.0.miRanda.aln</span><br><span class="line">#最后得到的文件即为miRNA与靶基因，最后将结果输入cytoscape画网络图。</span><br></pre></td></tr></table></figure><p><img src="/2021/11/22/miRanda%E9%A2%84%E6%B5%8BmiRNA%E7%BB%93%E5%90%88%E4%BD%8D%E7%82%B9/image-20211122111123118.png" alt="image-20211122111123118"></p><p>提取结果</p><p>miranda bta-miR-192.fa circRNA-ANKEF1.seq -out ANK-bta-miR-24-3p.fa.out.0 -sc 140.0 -en -20 -scale 4.0 -go -2.0 -ge -8.0 -quiet</p><p>grep ‘&gt;’ ANK-miR-24-3p.fa.out.0 &gt;ANK-miR–24-3p.fa.out.0.miRanda.aln</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先下载，官网找&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cs.kent.ac.uk/people/staff/dat/miranda/&quot;&gt;https://www.cs.kent.ac.uk/people/staff/dat/miranda/&lt;/a&gt;&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决linux shell脚本无法执行，报错syntax error near unexpected token `$&#39;\r&#39;&#39;</title>
+    <link href="http://example.com/2021/11/20/%E8%A7%A3%E5%86%B3linux-shell%E8%84%9A%E6%9C%AC%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C%EF%BC%8C%E6%8A%A5%E9%94%99syntax-error-near-unexpected-token-r/"/>
+    <id>http://example.com/2021/11/20/%E8%A7%A3%E5%86%B3linux-shell%E8%84%9A%E6%9C%AC%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C%EF%BC%8C%E6%8A%A5%E9%94%99syntax-error-near-unexpected-token-r/</id>
+    <published>2021-11-20T03:20:14.000Z</published>
+    <updated>2021-11-20T03:41:14.429Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2021/11/20/%E8%A7%A3%E5%86%B3linux-shell%E8%84%9A%E6%9C%AC%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C%EF%BC%8C%E6%8A%A5%E9%94%99syntax-error-near-unexpected-token-r/image-20211120112057910.png" alt="image-20211120112057910"></p><p>本来脚本没什么问题的</p><p>原因在于录入脚本是在windows系统上的TXT进行了粘贴复制，导致格式错误</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim -b XXX.sh</span><br></pre></td></tr></table></figure><p><img src="/2021/11/20/%E8%A7%A3%E5%86%B3linux-shell%E8%84%9A%E6%9C%AC%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C%EF%BC%8C%E6%8A%A5%E9%94%99syntax-error-near-unexpected-token-r/image-20211120112354904.png" alt="image-20211120112354904"></p><p>有了莫名其妙的^M</p><p>使用命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/\r//g&#x27; XXX.sh</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2021/11/20/%E8%A7%A3%E5%86%B3linux-shell%E8%84%9A%E6%9C%AC%E6%97%A0%E6%B3%95%E6%89%A7%E8%A1%8C%EF%BC%8C%E6%8A%A5%E9%94%99synta</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>samtools flagstat统计bam文件</title>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-13T08:07:29.818Z</updated>
+  <updated>2021-12-17T02:38:54.677Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蛋白生信分析流程</title>
+    <link href="http://example.com/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/"/>
+    <id>http://example.com/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/</id>
+    <published>2021-12-17T01:04:55.000Z</published>
+    <updated>2021-12-17T02:38:54.677Z</updated>
+    
+    <content type="html"><![CDATA[<p>序列蛋白初级分析流程，验证则需进行实验</p><p>1.通过NCBI中的BLAST模块将克隆所得的牛XXX基因序列进行同源性比对</p><p>同源对比可见”系统进化树构建“：<a href="https://wsz1207.github.io/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/">https://wsz1207.github.io/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/</a></p><p>2.运用在线工具ProtPram 分析XXX的蛋白质理化性质；</p><p>ProtParam能做什么？</p><ol><li><p>基于蛋白质序列的组分分析；</p></li><li><p>氨基酸亲疏水性等分析为高级结构预测提供参考。</p><p>网址：<a href="https://www.expasy.org/">https://www.expasy.org/</a></p><p>打开后CTRL+F 搜索ProtParam</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217091630145.png" alt="image-20211217091630145">![image-20211217091646533]</p></li></ol><p>进入</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217092108799.png" alt="image-20211217092108799"></p><p>结果解析</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217092824379.png" alt="image-20211217092824379"></p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217092842232.png" alt="image-20211217092842232"></p><p>3.ProtScal 分析蛋白质的亲疏水性；</p><p>一样在  expasy界面 打开后CTRL+F 搜索ProtScal</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217093302810.png" alt="image-20211217093302810"></p><p>继续输入蛋白序列，没差别，界面默认即可</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217094625934.png" alt="image-20211217094625934"></p><p><strong>呈上</strong></p><p>蛋白的氨基酸序列决定了它的亲水性/疏水性，亲疏水性决定了它在水中的可溶解性，一般高度可溶的蛋白质都是亲水性的部分裸露在最外面，疏水性的在内部。</p><p>可以推测可能的跨膜区，看看是不是膜蛋白</p><p><strong>启下</strong></p><p>4.运用TMpred 预测蛋白质跨膜区和跨膜方向；</p><p><a href="https://services.healthtech.dtu.dk/service.php?TMHMM-2.0">https://services.healthtech.dtu.dk/service.php?TMHMM-2.0</a> </p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217095230169.png" alt="image-20211217095230169"></p><p>代表无跨膜螺旋区</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217095607891.png" alt="image-20211217095607891"></p><p>5.NetPhos 3.1 Server 预测XXX中潜在的磷酸化位点；</p><p>​        蛋白磷酸化是一种非常普遍存在的翻译后修饰（Protein post-translational modification，PTM）的一种类型。蛋白质的磷酸化是通过酶促反应将磷酸基团转移到蛋白组氨基酸残基上的过程，在生物体内普遍存在，蛋白质的磷酸化与去磷酸化这一可逆过程几乎参与了生命活动的所有过程，与信号传导、细胞周期、生长发育、癌症发生发展等密切相关。<br>​        ATP和ADP的相互转化应该是我们生物学习中最早接触的磷酸化和去磷酸化了，也是目前最主要的信号转导方式。基于磷酸化的重要性和普遍性，可以说是目前研究最广泛的修饰类型。指由蛋白质激酶催化的把ATP的磷酸基转移到底物蛋白质氨基酸残基（丝氨酸、苏氨酸、酪氨酸）上的过程，或者在信号作用下结合GTP，是生物体一种普遍的调节方式，在细胞信号转导的过程中起重要作用。它可以快速且可逆地调控信号传递功能，包括催化活性、蛋白质-蛋白质相互作用等。<br> 磷酸化主要集中在<em>丝氨酸</em>、<em>苏氨酸</em>、<em>酪氨酸</em> 残基上，这些残基上具有游离的羟基，且本身不带电荷，当磷酸化后蛋白质便具有了电荷，从而使结构发生变化，进一步引起蛋白质活性的变化。（来源：百度）</p><p>​            工具：NetPhos 3.1网址：<a href="https://services.healthtech.dtu.dk/service.php?NetPhos-3.1">https://services.healthtech.dtu.dk/service.php?NetPhos-3.1</a></p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217100655874.png" alt="image-20211217100655874"></p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217100847139.png" alt="image-20211217100847139"></p><h1 id="：分析的氨基酸位置（磷酸化位点）"><a href="#：分析的氨基酸位置（磷酸化位点）" class="headerlink" title="：分析的氨基酸位置（磷酸化位点）"></a>：分析的氨基酸位置（磷酸化位点）</h1><p>x：氨基酸（磷酸化）简写<br> Context：包含分析位点的9个氨基酸序列<br> Score：结果打分（0-1），一般高于0.5则为阳性结果<br> Kinase：激酶信息，unsp表示没有特异性激酶预测结果<br> Answer：Yes表示阳性结果，即打分高于0.5</p><p>6.运用SOPMA 分析牛XXX蛋白的二级结构；</p><p>7.运用SWISSMODEL 分析XXX蛋白的三级空间构型。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;序列蛋白初级分析流程，验证则需进行实验&lt;/p&gt;
+&lt;p&gt;1.通过NCBI中的BLAST模块将克隆所得的牛XXX基因序列进行同源性比对&lt;/p&gt;
+&lt;p&gt;同源对比可见”系统进化树构建“：&lt;a href=&quot;https://wsz1207.github.io/2021/07/12/%E</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>差异表达Upset分析</title>
+    <link href="http://example.com/2021/12/15/%E5%B7%AE%E5%BC%82%E8%A1%A8%E8%BE%BEUpset%E5%88%86%E6%9E%90/"/>
+    <id>http://example.com/2021/12/15/%E5%B7%AE%E5%BC%82%E8%A1%A8%E8%BE%BEUpset%E5%88%86%E6%9E%90/</id>
+    <published>2021-12-15T11:39:46.000Z</published>
+    <updated>2021-12-17T02:38:09.857Z</updated>
+    
+    <content type="html"><![CDATA[<p>多组基因差异表达后如何进行Veen，这时可以用到Upset</p><p>安装包</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BiocManager::install(c(&#x27;UpSetR&#x27;,&#x27;dplyr&#x27;,&#x27;tidyr&#x27;))</span><br></pre></td></tr></table></figure><p>输入文件</p><p><img src="/2021/12/15/%E5%B7%AE%E5%BC%82%E8%A1%A8%E8%BE%BEUpset%E5%88%86%E6%9E%90/image-20211215201102881.png" alt="image-20211215201102881"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">rm(list=ls())</span><br><span class="line">library(UpSetR)</span><br><span class="line">library(dplyr)</span><br><span class="line">library(tidyr)</span><br><span class="line">library(openxlsx)</span><br><span class="line"># 读取6个分组的差异分析结果</span><br><span class="line">DEG_DESeq2_Heart_vs_Fat = read.xlsx(&quot;condition_Heart_vs_Fat_FC_2_Padj0.05.xlsx&quot;,sheet = 1)</span><br><span class="line">DEG_DESeq2_Liver_vs_Fat = read.xlsx(&quot;condition_Liver_vs_Fat_FC_2_Padj0.05.xlsx&quot;,sheet = 1)</span><br><span class="line">DEG_DESeq2_Spleen_vs_Fat = read.xlsx(&quot;condition_Spleen_vs_Fat_FC_2_Padj0.05.xlsx&quot;,sheet = 1)</span><br><span class="line">DEG_DESeq2_Lung_vs_Fat = read.xlsx(&quot;condition_Lung_vs_Fat_FC_2_Padj0.05.xlsx&quot;,sheet = 1)</span><br><span class="line">DEG_DESeq2_Kidney_vs_Fat = read.xlsx(&quot;condition_Kidney_vs_Fat_FC_2_Padj0.05.xlsx&quot;,sheet = 1)</span><br><span class="line">DEG_DESeq2_Muscle_vs_Fat = read.xlsx(&quot;condition_Muscle_vs_Fat_FC_2_Padj0.05.xlsx&quot;,sheet = 1)</span><br><span class="line">ls()</span><br><span class="line"></span><br><span class="line"># 提取所有差异表达的基因名</span><br><span class="line"></span><br><span class="line">DEG_DESeq2_Muscle_vs_Fat &lt;- DEG_DESeq2_Muscle_vs_Fat[DEG_DESeq2_Muscle_vs_Fat$Change!=&quot;Stable&quot;,1] #提取差异表达组，去除不显著的Stable</span><br><span class="line">DEG_DESeq2_Muscle_vs_Fat = na.omit(DEG_DESeq2_Muscle_vs_Fat) #由于表达值有NA，去除NA 如果没有NA可省略</span><br><span class="line">DEG_DESeq2_Liver_vs_Fat &lt;- DEG_DESeq2_Liver_vs_Fat[DEG_DESeq2_Liver_vs_Fat$Change!=&quot;Stable&quot;,1] </span><br><span class="line">DEG_DESeq2_Liver_vs_Fat = na.omit(DEG_DESeq2_Liver_vs_Fat) </span><br><span class="line">DEG_DESeq2_Spleen_vs_Fat &lt;- DEG_DESeq2_Spleen_vs_Fat[DEG_DESeq2_Spleen_vs_Fat$Change!=&quot;Stable&quot;,1] </span><br><span class="line">DEG_DESeq2_Spleen_vs_Fat = na.omit(DEG_DESeq2_Spleen_vs_Fat) </span><br><span class="line">DEG_DESeq2_Lung_vs_Fat &lt;- DEG_DESeq2_Lung_vs_Fat[DEG_DESeq2_Lung_vs_Fat$Change!=&quot;Stable&quot;,1] </span><br><span class="line">DEG_DESeq2_Lung_vs_Fat = na.omit(DEG_DESeq2_Lung_vs_Fat) </span><br><span class="line">DEG_DESeq2_Kidney_vs_Fat &lt;- DEG_DESeq2_Kidney_vs_Fat[DEG_DESeq2_Kidney_vs_Fat$Change!=&quot;Stable&quot;,1] </span><br><span class="line">DEG_DESeq2_Kidney_vs_Fat = na.omit(DEG_DESeq2_Kidney_vs_Fat) </span><br><span class="line">DEG_DESeq2_Heart_vs_Fat &lt;- DEG_DESeq2_Heart_vs_Fat[DEG_DESeq2_Heart_vs_Fat$Change!=&quot;Stable&quot;,1] </span><br><span class="line">DEG_DESeq2_Heart_vs_Fat = na.omit(DEG_DESeq2_Heart_vs_Fat) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">data &lt;- list(Heart_vs_Fat = DEG_DESeq2_Heart_vs_Fat,</span><br><span class="line">             Kidney_vs_Fat = DEG_DESeq2_Kidney_vs_Fat,</span><br><span class="line">             Lung_vs_Fat = DEG_DESeq2_Lung_vs_Fat,</span><br><span class="line">             Spleen_vs_Fat = DEG_DESeq2_Spleen_vs_Fat,</span><br><span class="line">             Liver_vs_Fat = DEG_DESeq2_Liver_vs_Fat,</span><br><span class="line">             Muscle_vs_Fat = DEG_DESeq2_Muscle_vs_Fat)</span><br><span class="line">             </span><br><span class="line">#作图</span><br><span class="line">#nsets: 最多展示多少个集合数据。</span><br><span class="line">#nintersects: 展示多少交集。</span><br><span class="line">#mb.ratio： 点点图和条形图的比例。</span><br><span class="line">#order.by： 交集如何排序。这里先根据freq，然后根据degree</span><br><span class="line">#decreasing： 变量如何排序。这里表示freq降序，degree升序</span><br><span class="line"></span><br><span class="line">upset(fromList(data),nsets = 6, order.by = &quot;freq&quot;)</span><br><span class="line"></span><br><span class="line">setsBarColors &lt;-c(&#x27;#EA4335&#x27;, &#x27;#FBBC05&#x27;, &#x27;#34A853&#x27;, &#x27;#4285F4&#x27;, &#x27;#F0E68C&#x27;, &#x27;#BC8F8F&#x27;)</span><br><span class="line">p = upset(fromList(data), nsets = 6, order.by = c(&quot;freq&quot;, &quot;degree&quot;), decreasing = c(TRUE,FALSE),</span><br><span class="line">          sets.bar.color=setsBarColors,</span><br><span class="line">      queries = list(#如果有需要标注的颜色，就在list后面按格式加就是了</span><br><span class="line">  list(</span><br><span class="line">    query = intersects, </span><br><span class="line">    params = list(&quot;Muscle_vs_Fat&quot;, &quot;Liver_vs_Fat&quot;, &quot;Heart_vs_Fat&quot;), </span><br><span class="line">    color = &quot;#DA70D6&quot;, </span><br><span class="line">    active = T), </span><br><span class="line">  list(</span><br><span class="line">    query = intersects, </span><br><span class="line">    params = list(&quot;Muscle_vs_Fat&quot;, &quot;Liver_vs_Fat&quot;), </span><br><span class="line">    color = &quot;#FFA500&quot;, </span><br><span class="line">    active = T), </span><br><span class="line">  list(</span><br><span class="line">    query = intersects, </span><br><span class="line">    params = list(&quot;Muscle_vs_Fat&quot;), </span><br><span class="line">    color = &quot;#4169E1&quot;),</span><br><span class="line">  list(</span><br><span class="line">    query = intersects, </span><br><span class="line">    params = list(&quot;Muscle_vs_Fat&quot;), </span><br><span class="line">    color = &quot;#F0E68C&quot;),</span><br><span class="line">  list(</span><br><span class="line">    query = intersects, </span><br><span class="line">    params = list(&quot;Muscle_vs_Fat&quot;), </span><br><span class="line">    color = &quot;#D2B48C&quot;)</span><br><span class="line">)</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">tiff(file = &quot;UPset_veen.tiff&quot;,width = 10,height =6,units = &quot;in&quot;,res = 300,pointsize = 6)</span><br><span class="line">print(p)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;多组基因差异表达后如何进行Veen，这时可以用到Upset&lt;/p&gt;
+&lt;p&gt;安装包&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>imageJ细胞计数</title>
@@ -38,11 +82,33 @@
   </entry>
   
   <entry>
+    <title>Readcounts转FPKM转TPM</title>
+    <link href="http://example.com/2021/12/09/Readcounts%E8%BD%ACFPKM%E8%BD%ACTPM/"/>
+    <id>http://example.com/2021/12/09/Readcounts%E8%BD%ACFPKM%E8%BD%ACTPM/</id>
+    <published>2021-12-09T06:51:25.000Z</published>
+    <updated>2021-12-17T02:37:55.315Z</updated>
+    
+    <content type="html"><![CDATA[<p>学习大佬的Readcounts转换技术</p><p>录入的文件格式</p><p><img src="/2021/12/09/Readcounts%E8%BD%ACFPKM%E8%BD%ACTPM/image-20211209155812396.png" alt="image-20211209155812396"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">rm(list = ls())</span><br><span class="line">Count_rumen &lt;- read.xlsx(&quot;XXX.xlsx&quot;,sheet = 1)</span><br><span class="line">names(Count_rumen)</span><br><span class="line">rownames(Count_rumen) &lt;- Count_rumen$CircID#这里我犯了一个极为鱼唇的错误 ‘$了Geneid’，关键还没报错，导致最后计算结果没有了命名</span><br><span class="line"></span><br><span class="line">metadata &lt;- Count_rumen[,1:2]#提取基因信息count数据前的几列，就像我的文件只需要提取第一和第二列</span><br><span class="line"></span><br><span class="line">countdata &lt;- Count_rumen[,3:ncol(Count_rumen)]#提取counts数，counts数据主题部分</span><br><span class="line"></span><br><span class="line">cpm &lt;- t(t(countdata)/colSums(countdata) * 1000000)#参考cpm定义</span><br><span class="line"></span><br><span class="line">avg_cpm &lt;- data.frame(avg_cpm=rowMeans(cpm))</span><br><span class="line"></span><br><span class="line">kb &lt;- metadata$Length / 1000</span><br><span class="line"></span><br><span class="line">rpk &lt;- countdata / kb</span><br><span class="line"></span><br><span class="line">tpm &lt;- round(t(t(rpk)/colSums(rpk) * 1000000),2)</span><br><span class="line"></span><br><span class="line">tpm &lt;- as.data.frame(tpm)</span><br><span class="line">names(tpm)</span><br><span class="line"></span><br><span class="line">write.csv(tpm,file = &quot;XXX_ALL_Tpm.csv&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;学习大佬的Readcounts转换技术&lt;/p&gt;
+&lt;p&gt;录入的文件格式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2021/12/09/Readcounts%E8%BD%ACFPKM%E8%BD%ACTPM/image-20211209155812396.png&quot; alt=&quot;ima</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>多组差异分析</title>
     <link href="http://example.com/2021/12/08/%E5%A4%9A%E7%BB%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/"/>
     <id>http://example.com/2021/12/08/%E5%A4%9A%E7%BB%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/</id>
     <published>2021-12-08T07:33:32.000Z</published>
-    <updated>2021-12-17T02:27:39.538Z</updated>
+    <updated>2021-12-17T02:39:11.240Z</updated>
     
     <content type="html"><![CDATA[<p>安装这些包</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">BiocManager::install(c(&quot;openxlsx&quot;,&#x27;org.Bt.eg.db&#x27;,&#x27;GO.db&#x27;,&#x27;topGO&#x27;,</span><br><span class="line">                     &#x27;GSEABase&#x27;,&#x27;clusterProfiler&#x27;,&#x27;fgsea&#x27;,</span><br><span class="line">                     &#x27;tidyr&#x27;,&#x27;apeglm&#x27;,&#x27;DESeq2&#x27;,&#x27;pacman&#x27;))</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm(list = ls())</span><br><span class="line">pacman::p_load(&quot;openxlsx&quot;,&#x27;org.Bt.eg.db&#x27;,&#x27;GO.db&#x27;,&#x27;topGO&#x27;,</span><br><span class="line">               &#x27;GSEABase&#x27;,&#x27;clusterProfiler&#x27;,&#x27;fgsea&#x27;,</span><br><span class="line">               &#x27;tidyr&#x27;,&#x27;apeglm&#x27;,&#x27;DESeq2&#x27;)#迅速加载</span><br></pre></td></tr></table></figure><p>插入表格</p><p><img src="/2021/12/08/%E5%A4%9A%E7%BB%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/image-20211215193210422.png" alt="image-20211215193210422"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">gene_list = read.xlsx(&quot;circRNA_ALL_Tpm.xlsx&quot;,sheet = 1)</span><br><span class="line">colnames(gene_list)</span><br><span class="line">rownames(gene_list) = gene_list$X1</span><br><span class="line">gene_list = gene_list[ ,-1]</span><br><span class="line">head(gene_list)</span><br><span class="line">#rownames(gene_list) &lt;- gene_list$XXX  #这里$出第一列ID，如果错误输出的表格会不完整</span><br><span class="line">length(colnames(gene_list))</span><br><span class="line">gene &lt;- as.matrix(gene_list[,1:21])</span><br><span class="line">head(gene)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="/2021/12/08/%E5%A4%9A%E7%BB%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/image-20211215193438778.png" alt="image-20211215193438778"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">names(gene)</span><br><span class="line"># fake metadata 分组分列</span><br><span class="line">coldata &lt;- data.frame(</span><br><span class="line">  condition = factor(c(</span><br><span class="line">    rep(&quot;Heart&quot;, 3),</span><br><span class="line">    rep(&quot;Liver&quot;, 3),</span><br><span class="line">    rep(&quot;Spleen&quot;, 3),</span><br><span class="line">    rep(&quot;Lung&quot;, 3),</span><br><span class="line">    rep(&quot;Kidney&quot;, 3),</span><br><span class="line">    rep(&quot;Muscle&quot;, 3),</span><br><span class="line">    rep(&quot;Fat&quot;, 3)</span><br><span class="line">    )))</span><br><span class="line"></span><br><span class="line">trait &lt;- c(&#x27;Heart&#x27;,&#x27;Liver&#x27;,&#x27;Spleen&#x27;,&#x27;Lung&#x27;,&#x27;Kidney&#x27;,&#x27;Muscle&#x27;)#所有的组</span><br><span class="line"></span><br><span class="line">coldata$condition &lt;- relevel(coldata$condition, ref = &quot;Fat&quot;)#所有的组与Fat相比，如果有需要，替换Fat成为其他即可</span><br></pre></td></tr></table></figure><p><img src="/2021/12/08/%E5%A4%9A%E7%BB%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/image-20211208155201461.png" alt="image-20211208155201461"></p><p>计算</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">str(coldata)</span><br><span class="line"></span><br><span class="line">dds &lt;- DESeqDataSetFromMatrix(</span><br><span class="line">  countData = round(gene),#这里使用了round()，取整数不然计算后的TPM值不为整数会报错</span><br><span class="line">  colData = coldata,</span><br><span class="line">  design= ~ condition)</span><br><span class="line"></span><br><span class="line">dds &lt;- DESeq(dds, betaPrior = FALSE)</span><br><span class="line"></span><br><span class="line">result_extract = as.data.frame(resultsNames(dds)[-1])</span><br><span class="line"></span><br><span class="line">levels(coldata$condition)</span><br><span class="line"></span><br><span class="line">setLabels &lt;- result_extract</span><br></pre></td></tr></table></figure><p>循环对比输出！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">res_ori &lt;- list()</span><br><span class="line"></span><br><span class="line">for (set in 1:length(setLabels$`resultsNames(dds)[-1]`)) </span><br><span class="line">&#123;</span><br><span class="line">  res_ori[[set]] &lt;- as.data.frame(results(dds, name=setLabels$`resultsNames(dds)[-1]`[set]));</span><br><span class="line">  #res_ori_2[[set]] &lt;- data.frame(ENSEMBL=row.names(res_ori_1[[set]]),</span><br><span class="line">                                 #res_ori_1[[set]]);</span><br><span class="line">  #res_ori[[set]] &lt;- dplyr::left_join(res_ori_2[[set]],annot,by=NULL);</span><br><span class="line">  res_ori[[set]]$Change &lt;- ifelse(res_ori[[set]]$padj &lt; 0.05 &amp; </span><br><span class="line">                                    abs(res_ori[[set]]$log2FoldChange) &gt;= 1,</span><br><span class="line">                                  ifelse(res_ori[[set]]$log2FoldChange &gt; 1,&#x27;Up&#x27;,&#x27;Down&#x27;),</span><br><span class="line">                                  &#x27;Stable&#x27;);</span><br><span class="line">  write.csv(res_ori[[set]],paste0(setLabels$`resultsNames(dds)[-1]`[set],&quot;_FC_2_Padj0.05&quot;,&quot;.csv&quot;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -55,8 +121,6 @@
     
     
     
-    
-    <category term="R语言" scheme="http://example.com/tags/R%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -376,68 +440,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>NCBI下载基因组注释文件</title>
-    <link href="http://example.com/2021/07/03/NCBI%E4%B8%8B%E8%BD%BD%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/"/>
-    <id>http://example.com/2021/07/03/NCBI%E4%B8%8B%E8%BD%BD%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B3%A8%E9%87%8A%E6%96%87%E4%BB%B6/</id>
-    <published>2021-07-03T09:32:00.000Z</published>
-    <updated>2021-07-03T09:32:00.868Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>NCBI生成基因启动子克隆引物</title>
-    <link href="http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/"/>
-    <id>http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/</id>
-    <published>2021-07-02T01:40:03.000Z</published>
-    <updated>2021-07-02T06:43:11.774Z</updated>
-    
-    <content type="html"><![CDATA[<p>NCBI的blast是直接可以生成引物</p><p><a href="https://www.ncbi.nlm.nih.gov/">https://www.ncbi.nlm.nih.gov/</a></p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094802857.png" alt="image-20210702094802857"></p><p>点击 Primer-blast</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094841238.png" alt="image-20210702094841238"></p><p>界面如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094903583.png" alt="image-20210702094903583"></p><p>需要关注的地方不多，一一讲解</p><hr><p>首先是启动子引物设计：</p><p>找到基因序列</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111018416.png" alt="image-20210702111018416"></p><p>要求不高，物种正确，第一个即可</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111312450.png" alt="image-20210702111312450"></p><p>进入后搜索：gene bank  点击进去后如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111342014.png" alt="image-20210702111342014"></p><p>启动子有个默认的规则是 在基因转录起始位点前方2000bp左右</p><p>因此</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111508117.png" alt="image-20210702111508117"><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111528225.png" alt="image-20210702111528225"></p><p>直接修改region 向前2300bp左右</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112436041.png" alt="image-20210702112436041"></p><p>复制1-2800bp的序列 点击pick primer</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095444200.png" alt="image-20210702095444200"></p><hr><p>如果需要将启动子潜在的位点2000bp全部克隆下来，我们则需要再2300-2000bp左右设计上游引物；下游引物在2000bp后</p><p>因此!删除原有内容，直接复制，然后设置获得引物的区间</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112552250.png" alt="image-20210702112552250"></p><p>其余参数如下：</p><p>PCR product size   Min：2000            Max:2500</p><p>Database: <img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095854327.png" alt="image-20210702095854327"></p><p>需要关注的点在产物长度，和primer比对时的数据库，由于启动子在基因组(提取DNA克隆)上；因此选用全基因组数据库进行引物特异性检测</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702100030893.png" alt="image-20210702100030893"></p><p>生成<img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112913057.png" alt="image-20210702112913057"></p><p>出来的都是在基因组上特异性较好的引物了，自己挑选</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;NCBI的blast是直接可以生成引物&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/&quot;&gt;https://www.ncbi.nlm.nih.gov/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/07/02/NCBI%E7</summary>
-      
-    
-    
-    
-    
-    <category term="实验技能" scheme="http://example.com/tags/%E5%AE%9E%E9%AA%8C%E6%8A%80%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo图片无法显示问题</title>
-    <link href="http://example.com/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/"/>
-    <id>http://example.com/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</id>
-    <published>2021-07-01T08:38:21.000Z</published>
-    <updated>2021-07-02T06:43:00.211Z</updated>
-    
-    <content type="html"><![CDATA[<p>hexo版本3.7.8</p><p>用的是Typora编辑博客内容</p><p>也遇到了本地博客无法生成图片的问题</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164108398-1625128870290.png" alt="image-20210701164108398"></p><p>兜兜转转了好几遍，找到了问题</p><p>首先是插件</p><p>默认代码</p><p>npm install hexo-asset-image –save</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164235045-1625128956091.png" alt="image-20210701164235045"></p><p>在node_modules安装了一个挺老的版本但无所谓</p><p>然后就是_config.yml中</p><p>改post_asset_folder:为 true</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164604341.png" alt="image-20210701164604341"></p><hr><p>最后，我们需要调试Typora的偏好设置；设置结果如下！</p><p><img src="/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/image-20210701164728919.png" alt="image-20210701164728919"></p><p>结合Typora设置+hexo设置即可解决本地图片不显示问题！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;hexo版本3.7.8&lt;/p&gt;
-&lt;p&gt;用的是Typora编辑博客内容&lt;/p&gt;
-&lt;p&gt;也遇到了本地博客无法生成图片的问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/07/01/Hexo%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%B</summary>
-      
-    
-    
-    
-    
-    <category term="博客美化" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/"/>
     
   </entry>
   

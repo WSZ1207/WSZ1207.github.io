@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-13T08:07:29.818Z</updated>
+  <updated>2021-12-17T02:10:25.478Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>蛋白生信分析流程</title>
+    <link href="http://example.com/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/"/>
+    <id>http://example.com/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/</id>
+    <published>2021-12-17T01:04:55.000Z</published>
+    <updated>2021-12-17T02:10:25.478Z</updated>
+    
+    <content type="html"><![CDATA[<p>序列蛋白初级分析流程，验证则需进行实验</p><p>1.通过NCBI中的BLAST模块将克隆所得的牛XXX基因序列进行同源性比对</p><p>同源对比可见”系统进化树构建“：<a href="https://wsz1207.github.io/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/">https://wsz1207.github.io/2021/07/12/%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/</a></p><p>2.运用在线工具ProtPram 分析XXX的蛋白质理化性质；</p><p>ProtParam能做什么？</p><ol><li><p>基于蛋白质序列的组分分析；</p></li><li><p>氨基酸亲疏水性等分析为高级结构预测提供参考。</p><p>网址：<a href="https://www.expasy.org/">https://www.expasy.org/</a></p><p>打开后CTRL+F 搜索ProtParam</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217091630145.png" alt="image-20211217091630145">![image-20211217091646533]</p></li></ol><p>进入</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217092108799.png" alt="image-20211217092108799"></p><p>结果解析</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217092824379.png" alt="image-20211217092824379"></p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217092842232.png" alt="image-20211217092842232"></p><p>3.ProtScal 分析蛋白质的亲疏水性；</p><p>一样在  expasy界面 打开后CTRL+F 搜索ProtScal</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217093302810.png" alt="image-20211217093302810"></p><p>继续输入蛋白序列，没差别，界面默认即可</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217094625934.png" alt="image-20211217094625934"></p><p><strong>呈上</strong></p><p>蛋白的氨基酸序列决定了它的亲水性/疏水性，亲疏水性决定了它在水中的可溶解性，一般高度可溶的蛋白质都是亲水性的部分裸露在最外面，疏水性的在内部。</p><p>可以推测可能的跨膜区，看看是不是膜蛋白</p><p><strong>启下</strong></p><p>4.运用TMpred 预测蛋白质跨膜区和跨膜方向；</p><p><a href="https://services.healthtech.dtu.dk/service.php?TMHMM-2.0">https://services.healthtech.dtu.dk/service.php?TMHMM-2.0</a> </p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217095230169.png" alt="image-20211217095230169"></p><p>代表无跨膜螺旋区</p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217095607891.png" alt="image-20211217095607891"></p><p>5.NetPhos 3.1 Server 预测XXX中潜在的磷酸化位点；</p><p>​        蛋白磷酸化是一种非常普遍存在的翻译后修饰（Protein post-translational modification，PTM）的一种类型。蛋白质的磷酸化是通过酶促反应将磷酸基团转移到蛋白组氨基酸残基上的过程，在生物体内普遍存在，蛋白质的磷酸化与去磷酸化这一可逆过程几乎参与了生命活动的所有过程，与信号传导、细胞周期、生长发育、癌症发生发展等密切相关。<br>​        ATP和ADP的相互转化应该是我们生物学习中最早接触的磷酸化和去磷酸化了，也是目前最主要的信号转导方式。基于磷酸化的重要性和普遍性，可以说是目前研究最广泛的修饰类型。指由蛋白质激酶催化的把ATP的磷酸基转移到底物蛋白质氨基酸残基（丝氨酸、苏氨酸、酪氨酸）上的过程，或者在信号作用下结合GTP，是生物体一种普遍的调节方式，在细胞信号转导的过程中起重要作用。它可以快速且可逆地调控信号传递功能，包括催化活性、蛋白质-蛋白质相互作用等。<br> 磷酸化主要集中在<em>丝氨酸</em>、<em>苏氨酸</em>、<em>酪氨酸</em> 残基上，这些残基上具有游离的羟基，且本身不带电荷，当磷酸化后蛋白质便具有了电荷，从而使结构发生变化，进一步引起蛋白质活性的变化。（来源：百度）</p><p>​            工具：NetPhos 3.1网址：<a href="https://services.healthtech.dtu.dk/service.php?NetPhos-3.1">https://services.healthtech.dtu.dk/service.php?NetPhos-3.1</a></p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217100655874.png" alt="image-20211217100655874"></p><p><img src="/2021/12/17/%E8%9B%8B%E7%99%BD%E7%94%9F%E4%BF%A1%E5%88%86%E6%9E%90%E6%B5%81%E7%A8%8B/image-20211217100847139.png" alt="image-20211217100847139"></p><h1 id="：分析的氨基酸位置（磷酸化位点）"><a href="#：分析的氨基酸位置（磷酸化位点）" class="headerlink" title="：分析的氨基酸位置（磷酸化位点）"></a>：分析的氨基酸位置（磷酸化位点）</h1><p>x：氨基酸（磷酸化）简写<br> Context：包含分析位点的9个氨基酸序列<br> Score：结果打分（0-1），一般高于0.5则为阳性结果<br> Kinase：激酶信息，unsp表示没有特异性激酶预测结果<br> Answer：Yes表示阳性结果，即打分高于0.5</p><p>6.运用SOPMA 分析牛XXX蛋白的二级结构；</p><p>7.运用SWISSMODEL 分析XXX蛋白的三级空间构型。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;序列蛋白初级分析流程，验证则需进行实验&lt;/p&gt;
+&lt;p&gt;1.通过NCBI中的BLAST模块将克隆所得的牛XXX基因序列进行同源性比对&lt;/p&gt;
+&lt;p&gt;同源对比可见”系统进化树构建“：&lt;a href=&quot;https://wsz1207.github.io/2021/07/12/%E</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>imageJ细胞计数</title>
@@ -411,30 +433,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>NCBI生成基因启动子克隆引物</title>
-    <link href="http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/"/>
-    <id>http://example.com/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/</id>
-    <published>2021-07-02T01:40:03.000Z</published>
-    <updated>2021-07-02T06:43:11.774Z</updated>
-    
-    <content type="html"><![CDATA[<p>NCBI的blast是直接可以生成引物</p><p><a href="https://www.ncbi.nlm.nih.gov/">https://www.ncbi.nlm.nih.gov/</a></p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094802857.png" alt="image-20210702094802857"></p><p>点击 Primer-blast</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094841238.png" alt="image-20210702094841238"></p><p>界面如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702094903583.png" alt="image-20210702094903583"></p><p>需要关注的地方不多，一一讲解</p><hr><p>首先是启动子引物设计：</p><p>找到基因序列</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111018416.png" alt="image-20210702111018416"></p><p>要求不高，物种正确，第一个即可</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111312450.png" alt="image-20210702111312450"></p><p>进入后搜索：gene bank  点击进去后如下</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111342014.png" alt="image-20210702111342014"></p><p>启动子有个默认的规则是 在基因转录起始位点前方2000bp左右</p><p>因此</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111508117.png" alt="image-20210702111508117"><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702111528225.png" alt="image-20210702111528225"></p><p>直接修改region 向前2300bp左右</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112436041.png" alt="image-20210702112436041"></p><p>复制1-2800bp的序列 点击pick primer</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095444200.png" alt="image-20210702095444200"></p><hr><p>如果需要将启动子潜在的位点2000bp全部克隆下来，我们则需要再2300-2000bp左右设计上游引物；下游引物在2000bp后</p><p>因此!删除原有内容，直接复制，然后设置获得引物的区间</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112552250.png" alt="image-20210702112552250"></p><p>其余参数如下：</p><p>PCR product size   Min：2000            Max:2500</p><p>Database: <img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702095854327.png" alt="image-20210702095854327"></p><p>需要关注的点在产物长度，和primer比对时的数据库，由于启动子在基因组(提取DNA克隆)上；因此选用全基因组数据库进行引物特异性检测</p><p><img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702100030893.png" alt="image-20210702100030893"></p><p>生成<img src="/2021/07/02/NCBI%E7%94%9F%E6%88%90%E5%9F%BA%E5%9B%A0%E5%90%AF%E5%8A%A8%E5%AD%90%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9/image-20210702112913057.png" alt="image-20210702112913057"></p><p>出来的都是在基因组上特异性较好的引物了，自己挑选</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;NCBI的blast是直接可以生成引物&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/&quot;&gt;https://www.ncbi.nlm.nih.gov/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/2021/07/02/NCBI%E7</summary>
-      
-    
-    
-    
-    
-    <category term="实验技能" scheme="http://example.com/tags/%E5%AE%9E%E9%AA%8C%E6%8A%80%E8%83%BD/"/>
     
   </entry>
   
